@@ -1,0 +1,96 @@
+{
+  "title": "Eamon's Test JSON Form",
+  "groups": 4,
+  "sounds": {
+    "birds": "audio/birds.wav",
+    "dragon": "audio/dragon.wav",
+    "drumsFull": "audio/drumsFull.wav",
+    "drumsSnareKick": "audio/drumsSnareKick.wav",
+    "drumsSnare": "audio/drumsSnare.wav",
+    "musicBox3": "audio/musicBox3.wav",
+    "musicBox2": "audio/musicBox2.wav",
+    "musicBox1": "audio/musicBox1.wav",
+    "marimba": "audio/marimba.wav",
+    "fifths4": "audio/fifths4.wav",
+    "fifths3": "audio/fifths3.wav",
+    "fifths2": "audio/fifths2.wav",
+    "fifths1": "audio/fifths1.wav",
+    "twinkleLowOctave": "audio/twinkleLowOctave.wav",
+    "twinkleHighOctave": "audio/twinkleHighOctave.wav"
+  },
+  "effects": {
+    "A": [
+      {
+        "type": "lowpass",
+        "lfo": {}
+      }
+    ],
+    "B": [
+      {
+        "type": "lowpass",
+        "lfo": {
+          "rate": 1.01,
+          "min": 100,
+          "max": 2300
+        }
+      }
+    ],
+    "C": [
+      {
+        "type": "reverb",
+        "decay": 4.1
+      },
+      {
+        "type": "pan",
+        "pan": -1
+      }
+    ],
+    "D": [
+      {
+        "type": "lowpass",
+        "frequency": 1200
+      },
+      {
+        "type": "pan",
+        "pan": 1
+      }
+    ]
+  },
+  "events": [
+    {
+      "at": "0:00",
+      "groups": "A",
+      "play": "fifths4",
+      "fade": 2,
+      "level": 0.8
+    },
+    {
+      "at": "0:24",
+      "groups": "CD",
+      "play": "twinkleLowOctave",
+      "fade": 1
+    },
+    {
+      "at": "0:40",
+      "groups": "CD",
+      "stop": "twinkleLowOctave",
+      "fade": 5
+    },
+    {
+      "at": "0:8",
+      "groups": "AB",
+      "play": "drumsSnare",
+      "fade": 2,
+      "ratio": 2,
+      "level": 1
+    },
+    {
+      "at": "0:0",
+      "play": "birds",
+      "fade": 10,
+      "ratio": 0.2,
+      "level": 0.5
+    }
+  ],
+  "end": "1:00"
+}
